@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EnterpriseManagmentSystemApplication<Enterprise_Managment_System>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.MiniProject.Enterprise_Managment_System.EnterpriseManagmentSystemApplication",
+            "projectName": "Enterprise_Managment_System",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
