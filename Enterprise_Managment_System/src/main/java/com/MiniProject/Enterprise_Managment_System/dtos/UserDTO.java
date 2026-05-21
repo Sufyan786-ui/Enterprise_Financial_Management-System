@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class UserDTO {
     private int user_id;
-    private int department_id; // Maps to the Department entity's ID
+    private String department_name; // Accepts name from frontend
     private String fullname;
     private String role;
     private String email;
