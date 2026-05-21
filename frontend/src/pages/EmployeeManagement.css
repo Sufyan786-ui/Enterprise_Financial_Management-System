@@ -1,0 +1,171 @@
+/* Employee Directory Stylesheet */
+
+.employee-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* Header & Back Navigation Button */
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.back-btn:hover {
+  transform: translateX(-3px);
+}
+
+/* Filters Grid Container */
+.filter-panel {
+  padding: 1.5rem;
+  background: var(--panel-glass);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+@media (max-width: 900px) {
+  .filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-group {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+  .search-group {
+    grid-column: span 1;
+  }
+}
+
+/* Input Icon Wrapper styling */
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.search-input-wrapper input:focus + .search-icon {
+  color: var(--primary);
+}
+
+.pl-10 {
+  padding-left: 2.5rem !important;
+}
+
+/* Reset Filter button styles */
+.reset-btn {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+
+.reset-btn:not(:disabled):hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.1);
+}
+
+.reset-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Records Table Panel styles */
+.table-panel {
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.hover-row {
+  transition: all 0.2s ease;
+}
+
+.hover-row:hover {
+  background-color: rgba(56, 189, 248, 0.03) !important;
+}
+
+/* Actions Column styling */
+.delete-action-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-action-btn:hover {
+  color: var(--danger) !important;
+  background: rgba(239, 68, 68, 0.1);
+  transform: scale(1.1);
+}
+
+/* Empty State Styling */
+.empty-state {
+  min-height: 350px;
+  padding: 3.5rem 2rem;
+  border: 1px dashed var(--border-light);
+  background: rgba(17, 24, 39, 0.4);
+}
+
+.empty-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.1);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 4px rgba(148, 163, 184, 0.05);
+  }
+}

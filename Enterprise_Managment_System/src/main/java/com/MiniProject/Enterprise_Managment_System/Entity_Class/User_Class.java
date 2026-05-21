@@ -2,6 +2,7 @@ package com.MiniProject.Enterprise_Managment_System.Entity_Class;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class User_Class {
     private Department department;
     private String fullname;
     private String role;
+    @Column(unique = true)
     private String email;
     private String status;
     private LocalDate created_at;
